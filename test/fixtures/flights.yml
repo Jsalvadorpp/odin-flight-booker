@@ -1,0 +1,7 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flight_date: 2020-03-26 23:39:35
+
+two:
+  flight_date: 2020-03-26 23:39:35
