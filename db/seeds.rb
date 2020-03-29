@@ -21,7 +21,7 @@ airports.each do |from_airport|
 
     airports.each do |to_airport|
 
-        date = DateTime.now + rand(0..8).hour
+        date = rand(0..8).hours.from_now
         duration = rand(1..6)
 
         new_flight = {
