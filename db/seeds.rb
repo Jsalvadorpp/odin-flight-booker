@@ -8,7 +8,7 @@
 
 
 airport_list = [
-    'VEN','USA','CHE','SWE','SUR','ESP','RUS','MEX','JPN','ITA','ECU''COL'
+    'VEN','USA','ESP','RUS','MEX','JPN','ITA'
 ]
 
 airport_list.each do |code|
@@ -22,7 +22,7 @@ airports.each do |from_airport|
     airports.each do |to_airport|
 
         date = DateTime.now + rand(0..8).hour
-        duration = Time.now + rand(1..6).hour
+        duration = rand(1..6)
 
         new_flight = {
             from_airport: from_airport,
