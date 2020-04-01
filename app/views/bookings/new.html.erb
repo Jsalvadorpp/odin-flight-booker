@@ -1,0 +1,21 @@
+<%= form_for(@booking ,html: {class: 'container mt-3'}) do |f| %>
+
+    <h1>Flight information</h1>
+
+    <p><strong>Origin airport: </strong><%= @flight.from_airport.code %><p>
+    <p><strong>Destiny airport: </strong><%= @flight.to_airport.code %><p>
+    <p><strong>Departure time: </strong><%= @flight.flight_date.strftime("at %I:%M %p") %><p>
+    <p><strong>Flight duration: </strong><%= @flight.flight_duration%> hours<p>
+
+    <%= f.hidden_field :flight_id , value: @flight.id %>
+
+    <%= f.fields_for :passenger do |p| %>
+        <div class='form-group'>
+            <strong><%= p.label 'Passenger name: '%></strong>
+            <%= p.text_field :name , class: 'form-control w-25' , placeholder: 'name'%>
+        </div>
+    <% end %>
+
+    <%= f.submit "Confirm booking", class: "btn btn-primary" %>
+
+<% end %>
