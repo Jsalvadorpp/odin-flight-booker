@@ -1,0 +1,12 @@
+<div class='container mt-3'>
+
+    <h1>Booking information</h1>
+
+    <p><strong>Origin airport: </strong><%= @booking.flight.from_airport.code %><p>
+    <p><strong>Destiny airport: </strong><%= @booking.flight.to_airport.code %><p>
+    <p><strong>Departure time: </strong><%= @booking.flight.flight_date.strftime("at %I:%M %p") %><p>
+    <p><strong>Flight duration: </strong><%= @booking.flight.flight_duration %> hours<p>
+    <p><strong>Passenger name: </strong><%= @booking.passenger.name %><p>
+
+
+</div>
