@@ -4,5 +4,7 @@ class Flight < ApplicationRecord
     has_many :passengers , through: :bookings
     has_many :bookings
   
-    default_scope { where("flight_date > ?",DateTime.now).order("flight_date ASC") }
+    #default_scope { where("flight_date > ?",DateTime.now).order("flight_date ASC") }
+    default_scope { order("flight_date ASC") }
+
 end
